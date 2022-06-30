@@ -19,8 +19,7 @@ $ pnpm dev:mfsu
 ```
 
 
-question: 适用于既要 Webpack 功能与生态，又想要 Vite 速度的我。
-1. mfsu 是否支持 .js文件 做webpack entry ？ 
+
 
 ## LICENSE
 
