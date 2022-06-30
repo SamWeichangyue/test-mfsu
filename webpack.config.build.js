@@ -6,15 +6,18 @@ const cwd = process.cwd();
 
 const config = {
   entry: resolve(cwd, './src/index.js'),
-  mode: 'development',
+  mode: 'production',
   output: {
     path: resolve(cwd, './dist'),
     filename: 'bundle.js',
     publicPath: '/'
   },
-  devServer: {
-    port: 8000,
-    host: 'localhost',
+  cache: {
+    type: 'filesystem',
+    buildDependencies: {
+      config: [__filename],
+    },
+    name: `${ process.env.NODE_ENV || 'development'}-cache`
   },
   resolve: {
     extensions: ['.ts', '.tsx', '.js', '.jsx'],

@@ -2,13 +2,14 @@
   "name": "@example/mfsu-independent",
   "private": true,
   "scripts": {
-    "build": "webpack",
+    "build": "webpack --config webpack.config.build.js",
     "dev:normal": "webpack serve --config webpack.config.normal.js",
-    "dev:mfsu": "webpack serve --config webpack.config.mfsu.js",
+    "dev:mfsu": "node ./test.js",
     "dev:esbuild": "webpack serve --config webpack.config.esbuild.js",
     "start": "npm run dev"
   },
   "dependencies": {
+    "antd": "4.21.3",
     "react": "^18.1.0",
     "react-dom": "^18.1.0"
   },
@@ -18,10 +19,14 @@
     "@babel/preset-react": "^7.16.7",
     "@types/react": "^18.0.9",
     "@types/react-dom": "^18.0.5",
-    "@umijs/mfsu": "4.0.0-canary.20220606.1",
+    "@umijs/mfsu": "4.0.2",
     "babel-loader": "^8.2.4",
+    "css-loader": "^6.7.1",
     "esbuild": "0.14.35",
     "html-webpack-plugin": "^5.5.0",
+    "less": "^4.1.3",
+    "less-loader": "^11.0.0",
+    "mini-css-extract-plugin": "^2.6.1",
     "webpack": "^5.72.1",
     "webpack-cli": "^4.9.2",
     "webpack-dev-server": "^4.8.1"
