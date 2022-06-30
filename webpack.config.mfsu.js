@@ -12,7 +12,6 @@ const getDevConfig = (cwd, mfsu) => ({
 	path: resolve(cwd, './dist'),
 	filename: '[name].js',
 	publicPath: 'http://localhost:8080/',
-	publicPath: '/',
   },
   resolve: {
 	extensions: ['.ts', '.tsx', '.js', '.jsx'],
